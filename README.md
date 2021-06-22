@@ -1,1 +1,1 @@
-# WPF---Circular-Radial-Progress-Bar-UserControl
+# WPF- Circular / Radial Progress Bar UserControl
