@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="Roboto_Light">Assets/#Roboto Light</FontFamily>
+    <FontFamily x:Key="Roboto_Medium">Assets/#Roboto Medium</FontFamily>
+    <FontFamily x:Key="Rubik_Light">Assets/#Rubik Light</FontFamily>
+
+</ResourceDictionary>

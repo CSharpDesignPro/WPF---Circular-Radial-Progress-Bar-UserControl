@@ -1,0 +1,141 @@
+﻿<Window x:Class="Circular_ProgressBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Circular_ProgressBar"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="725"
+        Width="475"
+        Background="Transparent"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+        
+        <!--// Border //-->
+
+        <Border Height="725"
+                Width="475"
+                Background="#2A2A2A"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                CornerRadius="20"
+                BorderBrush="#FFFFFF"
+                BorderThickness="5" />
+
+        <!--// Channel //-->
+
+        <TextBlock FontSize="28"
+                   FontFamily="{StaticResource Roboto_Medium}"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,50">
+            
+            <Run Text="C #   D E S I G N"
+                 Foreground="#FFFFFF" />
+            
+            <Run Text="  P R O"
+                 Foreground="#FEF200" />
+
+        </TextBlock>
+        
+        <!--// Start / Stop Button //-->
+
+        <Grid Height="150"
+              Width="150"
+              VerticalAlignment="Bottom"
+              HorizontalAlignment="Center"
+              Margin="0,0,0,115">
+
+            <ToggleButton x:Name="Start_Btn"
+                          Height="110"
+                          Width="110"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Style="{StaticResource PlayBtn_Style}"
+                          Checked="Start_Btn_Checked"
+                          Unchecked="Start_Btn_Unchecked" />
+
+        </Grid>
+        
+        <!--// Dial //-->
+
+        <Image Height="350"
+               Width="350"
+               Margin="0,60,0,0"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               Source="{StaticResource Dial_Image}"
+               Stretch="Uniform" />
+
+        <Grid Height="290"
+              Width="290"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Center"
+              Margin="0,90,0,0">
+
+            <Ellipse Height="210"
+                     Width="210"
+                     Stroke="#4D4D4D"
+                     StrokeThickness="10"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center" />
+
+            <TextBlock x:Name="TimerLabel"
+                       Text="0"
+                       Foreground="#FEF200"
+                       Height="100"
+                       Width="100"
+                       FontFamily="{StaticResource Roboto_Light}"
+                       FontSize="50"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       Margin="0,10,0,0">
+
+                <TextBlock.Effect>
+
+                    <DropShadowEffect BlurRadius="30"
+                                      ShadowDepth="2"
+                                      Direction="-90"
+                                      Color="#FEF200" />
+
+                </TextBlock.Effect>
+                
+            </TextBlock>
+
+            <TextBlock Text="P E R C E N T"
+                       Foreground="#FFFFFF"
+                       Height="20"
+                       Width="210"
+                       FontFamily="{StaticResource Rubik_Light}"
+                       FontSize="15"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Margin="0,60,0,0" />
+
+        </Grid>
+        
+        <!--// Add Circular ProgressBar UserControl //-->
+
+        <local:Circular_ProgressBar_UC x:Name="cpb_uc"
+                                       Margin="237,235,0,0" 
+                                       Visibility="Collapsed"/>
+        
+        <!--// Close Button //-->
+
+        <Button x:Name="CloseBtn"
+                Height="35"
+                Width="35"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0,20,20,0"
+                Style="{StaticResource PowerBtn_Style}"
+                Click="CloseBtn_Click" />
+
+    </Grid>
+    
+</Window>
