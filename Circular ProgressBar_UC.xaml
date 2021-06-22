@@ -1,4 +1,10 @@
-﻿<UserControl x:Class="Circular_ProgressBar.Circular_ProgressBar_UC"
+<!--<Summary> ///
+/// Author : R. Arun Mutharasu ///
+/// Created : 22-06-2021
+/// YouTube Channel : C# Design Pro ///
+/// </Summary>-->   
+
+<UserControl x:Class="Circular_ProgressBar.Circular_ProgressBar_UC"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
